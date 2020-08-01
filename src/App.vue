@@ -47,9 +47,9 @@ export default {
     logout () {
       this.axios.delete(process.env.VUE_APP_APIURL + '/logout')
         .then(response => {
-          console.log(response)
+          // console.log(response)
           const data = response.data
-          console.log(data)
+          // console.log(data)
           if (data.success) {
             this.$swal.fire({
               icon: 'success',

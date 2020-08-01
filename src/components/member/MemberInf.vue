@@ -71,12 +71,12 @@ export default {
       event.preventDefault()
       this.$store.commit('memberEmail', this.email)
 
-      console.log(this.form)
-      console.log(this.id)
+      // console.log(this.form)
+      // console.log(this.id)
       this.axios.patch(process.env.VUE_APP_APIURL + '/memberData/' + this.id, { email: this.email, name: this.form.name, address: this.form.address, cellphone: this.form.cellphone })
         .then(response => {
           const data = response.data
-          console.log(data)
+          // console.log(data)
           if (data.success) {
             this.$swal.fire({
               icon: 'success',
