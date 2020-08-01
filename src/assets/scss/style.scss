@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* 我是多行註解，會被編譯出去*/
+
+// 自訂樣式
+// css 原生樣式，會被編譯
+:root{
+    // 主題色
+    --color1:#fec6ad !important;
+    --color5: #126F80 !important;
+}
+
+$color1:#fec6ad !important;
+$color5: rgb(18, 111, 128) !important;
+
+.container{
+  max-width: 80% !important;
+  margin: auto;
+  min-height: 90vh;
+}
+
+#app{
+    .navbar{
+        font-size: 25px;
+    }
+    a{
+        color:white;
+    }
+
+    .logo{
+        width: 80px;
+    }
+    .aaa{
+        font-size: 30px;
+    }
+    .cart01{
+        width:30px;
+        margin-top: -8px;
+    }
+}
+
+footer{
+  height: 10vh;
+  background: #293f64 !important;
+  color: white;
+  margin-top: 3rem;
+  text-align: center;
+  line-height: 10vh;
+}
+
+#about{
+    // .container{
+    //   max-width: 90% !important;
+    //   margin: auto;
+    //   min-height: 70vh;
+    // }
+    .centerviedo{
+      margin-top: 5rem;
+    }
+  
+    .bg-cyan {
+      background-color: #20c997 !important;
+    }
+    .text-lighted{
+      color:white;
+    }
+    a.text-lighted:hover,
+    a.text-lighted:focus {
+      color: black !important;
+    }
+    .bg-greened {
+      background-color: #113d2f !important;
+    }
+
+    .tabs{
+      border:0px solid red ;
+    }
+
+    .tab-pane{
+      display:flex;
+    }
+     
+    // .nav{
+    //   border: 1px solid transparent !important;
+    // }
+    .nav-tabs{
+      border: 1px solid transparent;
+      
+    }
+
+    .nav-item{
+      width: 12.5%;
+      text-align: center;
+    }
+    @media (max-width:767px){
+      .nav-item{
+        width: 25%;
+        // margin:0.05rem;
+      }
+    }
+
+    .firstCard{
+      border: 0px solid transparent;
+      margin-top: 3rem;
+    }
+    .card-text{
+      margin: 1rem;
+    }
+    
+
+    //viedoAbout
+
+    .images-wrapper{
+      width: 100%;
+      // margin-top: 3rem;
+      height: 100%;
+
+    }
+    .imageAbout{
+      width: 32%;
+      height: 30vmin;
+      margin-bottom: 1rem;
+      position: relative;
+      object-fit:cover;
+      box-shadow: 5px 10px 10px black;
+      // background-repeat: no-repeat;
+    }
+    .imageAbout:hover::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      backdrop-filter: brightness(35%);
+      cursor: pointer;
+    }
+
+    .imageAbout p{
+      display: none;
+      border: 10px double white;
+    }
+
+    .imageAbout span{
+      position: absolute;
+      bottom: -60px;
+      // margin-bottom: -1rem;
+      font-size: 25px;
+    }
+
+    svg{
+      position: absolute;
+      margin: 1rem;
+      font-size: 50px;
+    }
+    
+    .imageAbout:hover p{
+      color: white;   
+      display: inline-block;
+      font-size: 20px;
+      // box-shadow: 1px 10px 10px black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform:translate(-50%, -50%);
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    .imageAbout:hover span, .imageAbout:hover svg{
+      display: none;
+    }
+
+    @media (max-width:960px){
+      // .imageAbout{
+      //   margin-bottom: 5rem;
+
+      // }
+      .imageAbout span{
+        position: absolute;
+        // bottom: -50px !important;
+        // margin-bottom: -1rem;
+        font-size: 20px;
+      }
+      svg{
+        position: absolute;
+        margin:0.2rem;
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 767px){
+      .images-wrapper{
+        flex-wrap:wrap
+      }
+      .imageAbout{
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 60vmin;
+        margin-bottom: 4rem;
+
+      }
+      
+      .imageAbout span{
+        position: absolute;
+        bottom: -60px;
+        font-size: 25px;
+
+      }
+      svg{
+        position: absolute;
+        margin: 1rem;
+        font-size: 50px;
+      }
+      
+    }
+
+    @media (max-width:575px){
+      .imageAbout{
+        margin-bottom: 5rem;
+
+      }
+      .imageAbout span{
+        position: absolute;
+        bottom: -60px;
+        // margin-bottom: -1rem;
+        font-size: 25px;
+      }
+      svg{
+        position: absolute;
+        margin: 0.6rem;
+        font-size: 40px;
+      }
+    }
+
+
+    
+    .cardAbout{
+      &:hover{
+        transform: translateY(-40px);
+      }
+    }
+    .cardAbout>.card-body{
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      // &:hover{
+      //   transform: translateY(-50px);
+      // }
+      
+      h4,p{
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+      p{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        
+      }
+    }
+
+    .teamImg{
+      margin-top: 2rem !important;
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: auto;
+    }
+}
+
+//賽事訊息
+#raceinformations{
+  .cardHeader{
+    border: 0px solid red;
+  }
+  .card{
+    border: 0px solid blue;
+  }
+  .raceInf{
+    max-width: 50vw;
+  }
+  .images-wrapper{
+    width: 100%;
+    // margin-top: 3rem;
+    height: 100%;
+    display: flex !important;
+    justify-content: space-between!important;
+    flex-wrap: wrap;
+  }
+  
+  .imageAbout{
+    width: 24%;
+    height: 25vmin;
+    // margin-bottom: 1rem;
+    margin: 0.25rem;
+    position: relative;
+    object-fit:cover;
+    // box-shadow: 1px 5px 15px black;
+    // background-repeat: no-repeat;
+    
+  }
+
+  .imageAbout:hover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    backdrop-filter: brightness(35%);
+    cursor: pointer;
+  }
+  
+  .imageAbout p{
+    display: none;
+    border: 10px double white;
+  }
+  
+  .imageAbout:hover p{
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    // box-shadow: 1px 10px 10px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  @media (max-width: 767px){
+      .imageAbout{
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 50vmin;
+        margin-bottom: 2rem;
+      
+      }
+    }
+    @media (max-width:991px){
+      .imageAbout{
+        width: 46%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    #carousel-1{
+      z-index: 999;
+    }
+  }
+
+// VueAgile styles
+.agile{
+  background: orange;
+}
+  // < >
+  .agile__nav-button{
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-duration: 0.3s;
+    width: 5%;
+    &:hover{
+      color: white;
+      background-color: rgba(#000, .3);
+      opacity: 1;
+    }
+  }
+  
+  .agile__nav-button--prev{
+    left: 0%;
+    &:hover {
+      background: linear-gradient(-90deg, transparent, rgba(#000, 0.3));
+      opacity: 1;
+    }
+  }
+  .agile__nav-button--next{
+    right: 0%;
+    &:hover{
+      background:linear-gradient(90deg,transparent, rgba(#000,0.3));
+    }
+  }
+  @media(max-width:767px){
+    .agile__nav-button{
+      width: 15%;
+    }
+    .agile__nav-button--prev{
+      left: 0;
+    }
+    .agile__nav-button--next{
+      right: 0;
+    }
+  }
+      
+  .agile__dots{
+    bottom: 10px;
+		left: 50%;
+		position: absolute;
+    transform: translateX(-50%);
+  }
+    
+  .agile__dot{
+    margin: 0 10px;
+  
+    button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 12px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    transition-duration: .3s;
+    width: 12px;
+    }
+    &:hover {
+      button {
+        background-color: #fff;
+      }
+    }
+  }
+  .agile__dot--current{
+    button{
+      background-color: #fff;
+    }
+  }
+    // Slides styles	
+  .slide{
+  display: block;
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+  }
