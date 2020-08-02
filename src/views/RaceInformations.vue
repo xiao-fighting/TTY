@@ -10,12 +10,12 @@
                   <b-card-header header-tag="header" class="p-1 cardHeader" role="tab">
                     <b-button block v-b-toggle="'accordion-'+index" variant="info" size="lg">{{text.title}}</b-button>
                   </b-card-header>
-                  <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel">
+                  <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel" visible>
                     <b-card-body>
-                      <b-card-text>日期: {{ text.date }}</b-card-text>
-                      <b-card-text>地點: {{ text.place }}</b-card-text>
+                      <b-card-text v-if="text.date">日期: {{ text.date }}</b-card-text>
+                      <b-card-text v-if="text.place">地點: {{ text.place }}</b-card-text>
                       <b-card-text v-if="text.price" v-html="text.price"></b-card-text>
-                      <b-card-text>賽事轉播: {{ text.tv }}</b-card-text>
+                      <b-card-text v-if="text.tv" v-html="text.tv"></b-card-text>
                       <b-card-text>{{ text.imf }}</b-card-text>
                     </b-card-body>
                   </b-collapse>
@@ -77,17 +77,20 @@ export default {
         {
           title: '模擬東京奧運對抗賽-羽球',
           date: '109年8月1日(六) ~ 8月3日(一)',
-          imf: '今年因新型冠狀病毒（COVID-19）疫情導致2020東京奧運延期、各大國際單項賽事停辦或延期，教育部體育署表示，為提升我國培訓隊選手訓練強度、檢測訓練成效及強化選手鬥志，將於今（109）年8月1日至8日舉辦「模擬東京奧運對抗賽」，8月1日下午5時在國家運動訓練中心舉行開幕典禮。',
+          imf: '今年因新型冠狀病毒（COVID-19）疫情導致2020東京奧運延期、各大國際單項賽事停辦或延期，為提升我國培訓隊選手訓練強度、檢測訓練成效及強化選手鬥志，將於109年8月1日至8日舉辦「模擬東京奧運對抗賽」。',
           place: '國訓中心',
-          tv: '全程不開放觀眾進場，將提供賽事轉播服務。'
+          tv: '賽事轉播: <p>電視：愛爾達體育台、公共電視台；<br>網路：MOESPORTS</p>'
         },
         {
-          title: '2020中華台北羽球公開賽',
-          date: '109年9月1日(二) ~ 9月6日(日)',
-          imf: 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon  tempor, sunt aliqua put a bird',
-          place: '臺北小巨蛋',
-          price: '票價資訊: <p>&emsp;&emsp;活動前三日免票入場，後三日票價依序為八強賽300元、四強賽600元及決賽800元，預計活動前一個月開放線上售票，臺北小巨蛋服務台也將開放現場購票；另提供半價優惠票予65歲以上之年長者及身心障礙者，持優惠票入場者需檢附證明文件備查。</p>',
-          tv: '未知。'
+          title: '中華台北羽球公開賽(取消)',
+          // date: '109年9月1日(二) ~ 9月6日(日)',
+          imf: '最終決定以國家防疫和選手安全為優先，確定停辦今年賽事。'
+
+        },
+        {
+          title: '新型冠狀病毒疫情影響的賽事',
+          imf: '截至2020年7月29日止，韓國羽球公開賽、中國羽球公開賽、日本羽球公開賽、印尼羽球超級100賽、荷蘭羽球公開賽、韓國羽球大師賽等18項賽事確定取消'
+
         }
       ],
       tabIndex: 0,

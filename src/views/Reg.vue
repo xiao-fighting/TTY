@@ -9,7 +9,7 @@
             <button @click="signUp= !signUp" class="btn">已成為會員</button>
           </div>
           <!-- <h1 class="text-center col-12">註冊</h1> -->
-          <div class="justify-content-center row">
+          <!-- <div class="justify-content-center row"> -->
 
           <b-form class="col-6 formArea" @submit="submitReg">
             <b-form-group label="帳號" label-for="input-accountReg" invalid-feedback="帳號長度為4 - 20個字" :state="state('input-accountReg')">
@@ -35,7 +35,7 @@
             <b-button type="submit" variant="ccc">註冊</b-button>
 
           </b-form>
-          </div>
+          <!-- </div> -->
         </div>
 
         <div v-else>
@@ -195,7 +195,7 @@ export default {
       this.axios.post(process.env.VUE_APP_APIURL + '/login', { account: this.accountSignin, password: this.passwordSignin })
         .then(response => {
           const data = response.data
-          // console.log(data)
+          console.log(data)
           if (data.success) {
             this.$swal.fire({
               icon: 'success',
@@ -214,8 +214,12 @@ export default {
 
             this.accountSignin = ''
             this.passwordSignin = ''
-            // 跳到登入後的周邊商品的頁面
-            this.$router.push('/products')
+            if (data.result[0].account === 'admintty') {
+              this.$router.push('/manager')
+            } else {
+              // 跳到登入後的周邊商品的頁面
+              this.$router.push('/products')
+            }
           } else {
             this.$swal.fire({
               icon: 'error',

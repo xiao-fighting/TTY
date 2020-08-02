@@ -11,6 +11,8 @@ import Souvenir from '../components/products/Souvenir.vue'
 import Vt from '../components/products/Vt.vue'
 import Bags from '../components/products/Bags.vue'
 import Limited from '../components/products/Limited.vue'
+import Addproducts from '../components/manager/Addproducts.vue'
+import Lookcart from '../components/manager/Lookcart.vue'
 
 Vue.use(VueRouter)
 
@@ -183,6 +185,41 @@ const routes = [
       login: false,
       title: '穎迷 | 註冊/登入'
     }
+  },
+  {
+    path: '/manager',
+    name: 'Manager',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "manager" */ '../views/Manager.vue'),
+    meta: {
+      login: true,
+      title: '穎迷 | 管理者'
+    },
+    children:
+    [
+      {
+        path: 'addproducts',
+        name: 'Addproducts',
+        component: Addproducts,
+        meta: {
+          login: true,
+          title: '穎迷 | 管理者-新增商品',
+          route: 'Manager'
+        }
+      },
+      {
+        path: 'lookcart',
+        name: 'Lookcart',
+        component: Lookcart,
+        meta: {
+          login: true,
+          title: '穎迷 | 管理者-購物車',
+          route: 'Manager'
+        }
+      }
+    ]
   }
 ]
 
@@ -190,7 +227,7 @@ const router = new VueRouter({
   routes
 })
 
-// 進去網站，判斷是否要擋葉面
+// 進去網站，判斷是否要擋頁面
 router.beforeEach((to, from, next) => {
   // login:true && store.state.user 沒有東西的話，丟去 login的頁面
   if (to.meta.login && !store.state.user) {
