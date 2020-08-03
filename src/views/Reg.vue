@@ -195,7 +195,7 @@ export default {
       this.axios.post(process.env.VUE_APP_APIURL + '/login', { account: this.accountSignin, password: this.passwordSignin })
         .then(response => {
           const data = response.data
-          console.log(data)
+          // console.log(data)
           if (data.success) {
             this.$swal.fire({
               icon: 'success',
