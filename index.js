@@ -245,11 +245,11 @@ app.patch('/memberData/:id', async (req, res) => {
     return
   }
   // 沒有登入
-  if (!req.session.user) {
-    res.status(401)
-    res.send({ success: false, message: '無權限' })
-    return
-  }
+  // if (!req.session.user) {
+  //   res.status(401)
+  //   res.send({ success: false, message: '無權限' })
+  //   return
+  // }
   try {
     console.log(req.body)
     const result = await db.users.findByIdAndUpdate(req.params.id, req.body, { new: true })
@@ -273,6 +273,7 @@ app.patch('/memberData/:id', async (req, res) => {
   }
 })
 
+// 新增商品
 app.post('/file', async (req, res) => {
   // 沒有登入
   if (req.session.user === undefined) {
@@ -292,6 +293,7 @@ app.post('/file', async (req, res) => {
   // err，檔案上傳的錯誤
   // upload.single(欄位)(req, res, 上傳完畢的 function)
   upload.single('image')(req, res, async error => {
+    console.log(error)
     if (error instanceof multer.MulterError) {
       // 上傳錯誤
       let message = ''
@@ -313,7 +315,7 @@ app.post('/file', async (req, res) => {
         } else {
           name = req.file.filename
         }
-        const result = await db.files.create(
+        const result = await db.productPictures.create(
           {
             user: req.session.user,
             description: req.body.description,

@@ -75,15 +75,23 @@ const productPictureSchema = new Schema({
   },
   name: {
     type: String,
-    name: [2, '商品名稱至少兩個字'],
+    minlength: [2, '商品名稱至少兩個字'],
     required: [true, '商品名稱必填']
   },
   description: {
     type: String,
     minlength: [2, '商品描述最少2個字'],
-    maxlength: [300, '商品描述最多300個字'],
+    maxlength: [300, '商品描述最多500個字'],
     requried: [true, '商品描述必填']
+  },
+  price: {
+    type: 'String',
+    requried: [true, '商品價格必填']
+  },
+  discoutPrice: {
+    type: 'String'
   }
+
 })
 
 // model():資料表名稱對應到上面的 Schema
