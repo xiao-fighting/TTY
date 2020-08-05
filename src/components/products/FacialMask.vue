@@ -1,16 +1,38 @@
 <template>
   <div id="facialMask">
-    <b-card v-for="(item, index) in items" :key="index" class="col-6">
-      <b-img :src="item.image" class="w-75" center></b-img>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col"> -->
+          <b-card v-for="(item, index) in items" :key="index">
+            <!-- <b-card-title>{{item.text}}</b-card-title> -->
+            <b-card-img :src="item.image" ></b-card-img>
+            <b-card-text>{{item.text}}</b-card-text>
+            <div class="d-flex">
+              <b-card-text><del>{{item.discountPrice}}</del></b-card-text>
+              <b-card-text>{{item.price}}</b-card-text>
+            </div>
+            <!-- <b-button variant="outline-info" @click="addCart(data)">
+              <font-awesome-icon :icon="['fas', 'cart-arrow-down']"></font-awesome-icon>
+            </b-button> -->
+          </b-card>
+        <!-- </div> -->
+        <!-- <div class="col">dvcvcxv</div> -->
+      </div>
+    </div>
+    <!-- <b-card v-for="(item, index) in items" :key="index" class="col-4">
+      <b-img :src="item.image" class="w-100"></b-img>
       <b-card-text class="text-center">{{item.text}}</b-card-text>
       <div class="price">
         <b-card-text ><del>{{item.price}}</del></b-card-text>
         <b-card-text>{{item.discountPrice}}</b-card-text>
-        <b-button>
-          <font-awesome-icon :icon="['fas', 'cart-arrow-down']" class="text-black" ></font-awesome-icon>
+        <b-button variant="outline-info">
+          <font-awesome-icon :icon="['fas', 'cart-arrow-down']"></font-awesome-icon>
         </b-button>
       </div>
-    </b-card>
+    </b-card> -->
+    <!-- <b-button variant="outline-info" @click="addCart(data.item)">
+      <font-awesome-icon :icon="['fas', 'cart-arrow-down']"></font-awesome-icon>
+    </b-button> -->
   </div>
 
 </template>
@@ -28,13 +50,18 @@ export default {
           discountPrice: 'NT$296'
         },
         {
-          image: 'http://220.128.133.15/s1090114/1596245997782.jpg',
+          image: 'https://raw.githubusercontent.com/xiao-fighting/images/master/mask0001.jpg?token=AOUPZQBMZLX4YXI7SYCJ3KK7FIWIU',
           text: 'TTY 保濕緊緻潤澤面膜 (箱)',
           price: 'NT$399',
           discountPrice: 'NT$296'
         }
       ]
     }
+  },
+  methods: {
+    // addCart (data) {
+    //   this.$store.commit('addCart', data)
+    // }
   }
 }
 </script>

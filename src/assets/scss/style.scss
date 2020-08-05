@@ -18,6 +18,9 @@
 
 $color1:#fec6ad !important;
 $color5: rgb(18, 111, 128) !important;
+.text-pink123 {
+  color: #e64b84 !important;
+}
 
 .container{
   max-width: 80% !important;
@@ -47,25 +50,23 @@ $color5: rgb(18, 111, 128) !important;
 
 footer{
   height: 10vh;
-  background: #293f64 !important;
+  background: #0b2637 !important;
   color: white;
-  margin-top: 3rem;
+  // margin-top: 3rem;
   text-align: center;
   line-height: 10vh;
 }
 
-#about{
-    // .container{
-    //   max-width: 90% !important;
-    //   margin: auto;
-    //   min-height: 70vh;
-    // }
+#about{  
+  // filter: opacity(100%);
+
+  
     .centerviedo{
       margin-top: 5rem;
     }
   
     .bg-cyan {
-      background-color: #20c997 !important;
+      background-color: rgba(23, 162, 184,0.5) !important;
     }
     .text-lighted{
       color:white;
@@ -80,12 +81,16 @@ footer{
 
     .tabs{
       border:0px solid red ;
+      // background: transparent!important;
     }
 
+ 
     .tab-pane{
-      display:flex;
+      // display:flex;
+      background: rgba(255, 255, 255,0.5);
     }
-     
+
+
     // .nav{
     //   border: 1px solid transparent !important;
     // }
@@ -108,9 +113,16 @@ footer{
     .firstCard{
       border: 0px solid transparent;
       margin-top: 3rem;
+      background: transparent;
     }
     .card-text{
       margin: 1rem;
+      padding: 1rem;
+      // padding-right: 0;
+      letter-spacing:1px;
+      line-height:35px;
+      text-align: justify;
+      // background: white;
     }
     
 
@@ -124,7 +136,7 @@ footer{
     }
     .imageAbout{
       width: 32%;
-      height: 30vmin;
+      height: 32vmin;
       margin-bottom: 1rem;
       position: relative;
       object-fit:cover;
@@ -152,10 +164,10 @@ footer{
       font-size: 25px;
     }
 
-    svg{
+    .fa-play-circle{
       position: absolute;
       margin: 1rem;
-      font-size: 50px;
+      font-size: 40px;
     }
     
     .imageAbout:hover p{
@@ -240,6 +252,8 @@ footer{
 
     
     .cardAbout{
+      background: rgba(255,255,255,0.5);
+      border: 0px solid red;
       &:hover{
         transform: translateY(-40px);
       }
@@ -247,6 +261,7 @@ footer{
     .cardAbout>.card-body{
       display: flex;
       flex-direction: column;
+      // justify-content: space-around;
       // flex-wrap: wrap;
       // &:hover{
       //   transform: translateY(-50px);
@@ -254,31 +269,40 @@ footer{
       
       h4,p{
         text-align: center;
-        margin-top: 1.5rem;
+        // margin-top: 1rem;
       }
-      // p{
-      //   margin-left: 3rem;
-      //   margin-right: 3rem;
-        
-      // }
+   
     }
 
     .teamImg{
-      margin-top: 2rem !important;
+      // margin-top: 2rem !important;
       width: 200px;
       height: 200px;
       display: block;
       margin: auto;
     }
+
+    @media (max-width:575px){
+      .cardAbout{
+        &:hover{
+          transform: translateY(0px);
+        }
+      }
+      h4,p{
+        margin-top: 0;
+      }
+    }
 }
 
 //賽事訊息
 #raceinformations{
+  
   .cardHeader{
     border: 0px solid red;
   }
   .card{
     border: 0px solid blue;
+    background:rgba(255,255,255,0.2);
   }
   .raceInf{
     max-width: 50vw;
@@ -353,7 +377,7 @@ footer{
 
 // VueAgile styles
 .agile{
-  background: orange;
+  background: rgba(255,255,255,0.3);
 }
   // < >
   .agile__nav-button{

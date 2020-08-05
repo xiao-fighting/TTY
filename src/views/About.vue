@@ -1,30 +1,54 @@
 <template>
-  <div id="about" >
+  <div id="about" :style="{backgroundImage:`url('./images/bg.jpg')`}">
     <div class="container">
       <div class="row">
         <b-card no-body class="firstCard">
           <b-tabs v-model="tabIndex" align="right">
             <b-tab no-body title="2020年" :title-link-class="tabsClass(0)">
-              <b-card-img src="http://220.128.133.15/s1090114/1595212643551.jpg" class="w-50">全英賽四年三冠</b-card-img>
-              <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
-            </b-tab>
+              <div class="row">
+                <div class="col-6 p-0">
+                  <b-card-img src="https://picsum.photos/400/300/?random=1"></b-card-img>
+                    </div>
+                <div class="col-6">
+                  <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+                </div>
+               </div>
+             </b-tab>
              <b-tab no-body title="技術特點" :title-link-class="tabsClass(1)">
-              <b-card-img src="https://picsum.photos/400/300/?random=2" class="w-50">全英賽四年三冠</b-card-img>
-              <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+              <div class="row">
+                <div class="col-6 p-0">
+                  <b-card-img src="https://picsum.photos/400/300/?random=2"></b-card-img>
+                </div>
+                <div class="col-6">
+                  <b-card-text v-html="one"></b-card-text>
+                </div>
+              </div>
             </b-tab>
              <b-tab no-body title="1234" :title-link-class="tabsClass(2)">
-              <b-card-img src="https://picsum.photos/400/300/?random=3" class="w-50">全英賽四年三冠</b-card-img>
-              <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+               <div class="row">
+                 <div class="col-6 p-0">
+                  <b-card-img src="https://picsum.photos/400/300/?random=3"></b-card-img>
+                 </div>
+                 <div class="col-6">
+                  <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+                 </div>
+               </div>
             </b-tab>
              <b-tab  no-body title="初露鋒芒" :title-link-class="tabsClass(3)">
-              <b-card-img src="https://picsum.photos/400/300/?random=4" class="w-50">全英賽四年三冠</b-card-img>
-              <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+               <div class="row">
+                 <div class="col-6 p-0">
+                   <b-card-img src="https://picsum.photos/400/300/?random=4"></b-card-img>
+                 </div>
+                 <div class="col-6 p-0">
+                  <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+                 </div>
+               </div>
             </b-tab>
           </b-tabs>
         </b-card>
 
         <template>
-          <h1 class="mt-5 mb-5">戴資穎專訪</h1>
+          <h1 class="mt-5 mb-5">專訪影音</h1>
           <CoolLightBox :items="items" :index="index" @close="index = null"></CoolLightBox>
           <div class="images-wrapper d-flex justify-content-between" >
             <div class="image imageAbout" v-for="(image, imageIndex) in items" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
@@ -34,8 +58,8 @@
             </div>
           </div>
         </template>
-        <div class="team mt-5">
-          <h1 class="mt-md-5 mb-5">強而有力的團隊</h1>
+        <div class="team my-5">
+          <h1 class="mt-md-5 mb-5">專業團隊</h1>
           <template >
             <u-animate-container>
               <u-animate name="animate__fadeInLeft" delay="0s" duration="1s" :iteration="1" :offset="350" animateClass="animated" :begin="false">
@@ -44,12 +68,12 @@
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
                         <h4 >教練賴建誠</h4>
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere corporis reprehenderit perferendis velit maxime illum atque omnis qui eveniet?</p>
+                        <p>在戰術的觀察及訓練計畫的擬定上，針對戴資穎失分的部分加強訓練，注重比賽過程的遠超過比賽結果</p>
                       </b-card>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
                         <h4 >教練萬佳鑫</h4>
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere corporis reprehenderit perferendis velit maxime illum atque omnis qui eveniet?</p>
+                        <p >在戰術的觀察及訓練計畫的擬定上，針對戴資穎失分的部分加強訓練，注重比賽過程的遠超過比賽結果</p>
                       </b-card>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
@@ -65,12 +89,8 @@
                   </div>
               </u-animate>
             </u-animate-container>
-
           </template>
         </div>
-
-        <div>
-      </div>
       </div>
     </div>
   </div>
@@ -104,7 +124,8 @@ export default {
           text: 'play the video'
         }
       ],
-      index: null
+      index: null,
+      one: '<h5 class="text-pink123 pb-2"><b>拿著球拍的魔術師</b></h5><p>戴資穎球路多變且步伐輕快，善於使用網前細膩的假動作在擊球的瞬間，造成時間差，破壞對手的啟動以及四角球拉吊突擊使對手因疲於奔命，並具備優異且有力的反拍控制能力，能讓對手猜不透球路，進而取得球場上的控制權而贏得勝利。</p><p>戴資穎於2017年馬來西亞羽球頂級超級賽中測得每小時366公里的球速。</p>'
     }
   },
   methods: {
@@ -112,7 +133,7 @@ export default {
       if (this.tabIndex === idx) {
         return ['bg-cyan', 'text-lighted']
       } else {
-        return ['bg-greened ', 'text-light']
+        return ['bg-info ', 'text-white']
       }
     }
   }

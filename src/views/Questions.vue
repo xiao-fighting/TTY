@@ -1,8 +1,8 @@
 <template>
-  <div id="questions">
-    <div class="container mt-5">
+  <div id="questions" :style="{backgroundImage:`url('./images/bg.jpg')`}">
+    <div class="container">
 
-      <h3 class="text-center">購物須知</h3>
+      <h3 class="text-center pt-5">購物須知</h3>
       <p class="text-center">歡迎您來到穎迷線上購物網站，為了維護您的權益，請詳閱本商店之約定條款。</p>
       <div>
         <b-card no-body>
@@ -94,9 +94,14 @@ export default {
 <style lang="scss">
 $cqColor:#BBDEFB;
 #questions{
+  .container{
 
+  max-width: 50% !important;
+  // margin: auto;
+  min-height: 90vh;
+}
   .nav-item{
-    background: rgba(23, 162, 184,0.5);
+    background: rgba(23, 162, 184, 0.5);
     // color: purple !important;
   }
  .nav-pills .nav-link.active{

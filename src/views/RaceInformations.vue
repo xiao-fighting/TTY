@@ -1,11 +1,11 @@
 <template>
-  <div id="raceinformations">
+  <div id="raceinformations" :style="{backgroundImage:`url('./images/bg.jpg')`}">
     <div class="container">
       <div class="row">
         <section class="mt-5 w-100">
-          <h1>即將登場</h1>
+          <h2>即將登場</h2>
             <template>
-              <div role="tablist" class="mt-3 d-flex ">
+              <div role="tablist" class="mt-3 d-flex">
                 <b-card no-body class="mb-1 col" v-for="(text, index) in texts" :key="index">
                   <b-card-header header-tag="header" class="p-1 cardHeader" role="tab">
                     <b-button block v-b-toggle="'accordion-'+index" variant="info" size="lg">{{text.title}}</b-button>
@@ -25,7 +25,7 @@
             </template>
           </section>
           <section class="my-5 w-100">
-            <h1 class="mb-3">精彩片段</h1>
+            <h2 class="mb-3">精彩片段</h2>
             <template>
               <CoolLightBox :items="items" :index="index" @close="index = null"></CoolLightBox>
               <div class="images-wrapper" >
@@ -36,7 +36,7 @@
             </template>
           </section>
           <section class="my-5 w-100">
-          <h1 class="mb-3">精彩賽事</h1>
+          <h2 class="mb-3">經典賽事</h2>
           <template>
               <agile>
                 <template >
@@ -113,41 +113,41 @@ export default {
           title: '2020全英公開賽女單八強戰-小戴',
           description: '',
           thumb: 'https://picsum.photos/600/300/?image=25',
-          src: 'https://www.youtube.com/watch?v=RDNsZAtLCFg&list=PLDB8ct-UxVonk7L-9Zm4Jl7aEYxeKGSrE&index=37&t=0s',
+          src: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           text: 'play the video'
         },
         {
           title: '789',
           description: '',
-          thumb: '',
+          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           src: '',
           text: 'play the video'
         },
         {
-          title: '789',
+          title: '123',
           description: '',
-          thumb: '',
+          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           src: '',
           text: 'play the video'
         },
         {
-          title: '789',
+          title: '456',
           description: '',
-          thumb: '',
+          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           src: '',
           text: 'play the video'
         },
         {
-          title: '789',
+          title: '912',
           description: '',
-          thumb: '',
+          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           src: '',
           text: 'play the video'
         },
         {
-          title: '789',
+          title: '012',
           description: '',
-          thumb: '',
+          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
           src: '',
           text: 'play the video'
         }

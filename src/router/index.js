@@ -174,7 +174,7 @@ const routes = [
     name: 'ShoppingCart',
     component: () => import(/* webpackChunkName: "shoppingCart" */ '../views/ShoppingCart.vue'),
     meta: {
-      login: true
+      login: false
     }
   },
   {
@@ -220,6 +220,15 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/vtxr',
+    name: 'Vtxr',
+    component: () => import(/* webpackChunkName: "vtxr" */ '../views/Vtxr.vue'),
+    meta: {
+      login: false,
+      title: '勝利球拍 Drive X R'
+    }
   }
 ]
 

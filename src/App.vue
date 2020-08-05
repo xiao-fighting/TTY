@@ -23,7 +23,7 @@
       router-view
     footer(class="ttyfooter")
       font-awesome-icon(:icon="['far','copyright']" class="text-white")
-      span 圖片來源:victor
+      span 圖片來源: victor、ilovetty
 </template>
 <script>
 export default {
@@ -74,44 +74,44 @@ export default {
             text: error.response.data.message
           })
         })
-    },
-    heartbeat () {
-      this.axios.get(process.env.VUE_APP_APIURL + '/heartbeat')
-        .then(response => {
-          // console.log(response)
-          const data = response.data
-          //  console.log(data) ======>false??
-          // console.log(data)
-          // 如果是登入中
-          if (this.user.length > 0) {
-            // 如果後端登入時間過期
-            if (!data) {
-              alert('登入時效已過')
-              // 前端登出
-              this.$store.commit('logout')
-              // 如果現在不是在首頁，跳到登出後的首頁
-              if (this.$route.path !== '/') {
-                this.$router.push('/')
-              }
-            }
-          }
-        })
-        .catch(() => {
-          alert('發生錯誤')
-          this.$store.commit('logout')
-          // 如果現在不是在首頁，跳到登出後的首頁
-          if (this.$route.path !== '/') {
-            this.$router.push('/')
-          }
-        })
     }
+    // heartbeat () {
+    //   this.axios.get(process.env.VUE_APP_APIURL + '/heartbeat')
+    //     .then(response => {
+    //       // console.log(response)
+    //       const data = response.data
+    //       //  console.log(data) ======>false??
+    //       // console.log(data)
+    //       // 如果是登入中
+    //       if (this.user.length > 0) {
+    //         // 如果後端登入時間過期
+    //         if (!data) {
+    //           alert('登入時效已過')
+    //           // 前端登出
+    //           this.$store.commit('logout')
+    //           // 如果現在不是在首頁，跳到登出後的首頁
+    //           if (this.$route.path !== '/') {
+    //             this.$router.push('/')
+    //           }
+    //         }
+    //       }
+    //     })
+    //     .catch(() => {
+    //       alert('發生錯誤')
+    //       this.$store.commit('logout')
+    //       // 如果現在不是在首頁，跳到登出後的首頁
+    //       if (this.$route.path !== '/') {
+    //         this.$router.push('/')
+    //       }
+    //     })
+    // }
   },
   // 當app.vue掛載到網頁上時
   mounted () {
-    this.heartbeat()
-    setInterval(() => {
-      this.heartbeat()
-    }, 1000 * 5)
+    // this.heartbeat()
+    // setInterval(() => {
+    //   this.heartbeat()
+    // }, 1000 * 5)
   }
 }
 </script>

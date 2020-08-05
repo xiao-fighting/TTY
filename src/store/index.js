@@ -14,7 +14,8 @@ export default new Vuex.Store({
     email: '',
     name: '',
     address: '',
-    cellphone: ''
+    cellphone: '',
+    cart: []
 
   },
   // 修改狀態的 function
@@ -49,6 +50,13 @@ export default new Vuex.Store({
     },
     memberCellphone (state, data) {
       state.cellphone = data
+    },
+    addCart (state, data) {
+      // console.log(data)
+      state.cart.push(data)
+    },
+    delCart (state, index) {
+      state.cart.splice(index, 1)
     }
   },
   // 獲取資料的 function
@@ -73,6 +81,9 @@ export default new Vuex.Store({
     },
     cellphone (state) {
       return state.cellphone
+    },
+    cart (state) {
+      return state.cart
     }
 
   },

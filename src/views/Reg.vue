@@ -1,11 +1,11 @@
 <template>
-  <div id="reg">
+  <div id="reg" :style="{backgroundImage:`url('./images/bg.jpg')`}">
     <div class="container">
-      <div class="base bg-danger">
+      <div class="base">
         <div v-if="signUp">
           <div class="aim">
             <h2>成為會員</h2>
-            <p>讓我們一起購買周邊商品，去球場為她加油</p>
+            <p>讓我們一起購買周邊商品，去球場為她加油~</p>
             <button @click="signUp= !signUp" class="btn">已成為會員</button>
           </div>
           <!-- <h1 class="text-center col-12">註冊</h1> -->
@@ -243,6 +243,7 @@ export default {
 $blue:#395284;
 $blue2:#293f64;
 $yellow:#ffc554;
+$pink:#e64b84;
 $grey:#edeae3;
 $white:white;
 $transition:all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -258,16 +259,24 @@ flex-box {
     @extend flex-box;
     height:100%;
     background-color: $blue;
-    padding-top:10vh;
+    padding-top:5vh;
+    overflow-x: hidden;
+
+    .container{
+      max-width: 50% !important;
+      margin: auto;
+      min-height: 74.1vh !important;
+    }
+
     .www{
       display: flex;
 
     }
     .base{
-      background-color:$white;
+      // background-color:$white;
       border-radius:5px;
       width:100%;
-      height:80vh;
+      height:70vh;
       margin: 0;
       position:relative;
       // overflow:hidden;
@@ -300,7 +309,7 @@ flex-box {
         text-align: center;
       }
       .aim{
-        padding:5%;
+        padding:2%;
         background-color:$yellow;
         height:100%;
         width:50%;
