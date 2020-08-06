@@ -281,9 +281,9 @@ flex-box {
       position:relative;
       // overflow:hidden;
       z-index:0;
-      -webkit-box-shadow: 0 10px 6px -6px darken($blue, 10%);
-      -moz-box-shadow: 0 10px 6px -6px darken($blue, 10%);
-      box-shadow: 0 10px 6px -6px darken($blue, 10%);
+      // -webkit-box-shadow: 0 10px 6px -6px darken($blue, 10%);
+      // -moz-box-shadow: 0 10px 6px -6px darken($blue, 10%);
+      // box-shadow: 0 10px 6px -6px darken($blue, 5%);
       .ccc{
         font-size:20px;
         // background: #293f64;

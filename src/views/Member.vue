@@ -8,7 +8,7 @@
           <router-link to="/member/memberInf" class="col-3 p-0 text-center"><h3>會員資料</h3></router-link>
           <router-link to="/member/orderInf" class="col-3 p-0 text-center"><h3>訂單資訊</h3></router-link>
           <hr class="col-9">
-          <router-view class="mt-3 bg-warning"></router-view>
+          <router-view class="mt-3 mm"></router-view>
         </div>
       </section>
     </div>
@@ -20,7 +20,9 @@
   a {
     color: black !important;
   }
-
+  .mm{
+    background: rgba(255, 255, 255,0.4);
+  }
 }
   #__BVID__49__BV_tab_container_{
     background:red;

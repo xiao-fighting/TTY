@@ -1,5 +1,5 @@
 <template lang="pug">
-  #app
+  #app(:style="{backgroundImage:`url('./images/bg.jpg')`}")
     b-navbar(toggleable='lg' :style="style")
       b-navbar-brand(to="/").mx-3
         b-img(src="../public/images/logo.png" class="logo ml-lg-4")
@@ -8,7 +8,7 @@
         b-navbar-nav.ml-auto
           b-nav-item(to="/about") 關於小戴
           b-nav-item(to='/raceInformations') 賽事資訊
-          b-nav-item(to='/products') 周邊商品
+          b-nav-item(to='/products/vt') 周邊商品
           b-nav-item(to='/questions') 購物須知
           b-nav-item(to='/member/memberInf') 會員專區
         b-navbar-nav.ml-auto.mx-5

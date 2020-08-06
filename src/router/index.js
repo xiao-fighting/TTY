@@ -14,6 +14,8 @@ import Limited from '../components/products/Limited.vue'
 import Addproducts from '../components/manager/Addproducts.vue'
 import Lookcart from '../components/manager/Lookcart.vue'
 
+import Vtxr from '../components/products/Vtxr.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -104,6 +106,16 @@ const routes = [
         meta: {
           login: false,
           title: '穎迷 | 周邊商品-Victory系列',
+          route: 'Products'
+        }
+      },
+      {
+        path: 'vtxr',
+        name: 'Vtxr',
+        component: Vtxr,
+        meta: {
+          login: false,
+          title: '穎迷 | 周邊商品-Victory系列 - 勝利球拍 Drive X R',
           route: 'Products'
         }
       },
@@ -220,16 +232,8 @@ const routes = [
         }
       }
     ]
-  },
-  {
-    path: '/vtxr',
-    name: 'Vtxr',
-    component: () => import(/* webpackChunkName: "vtxr" */ '../views/Vtxr.vue'),
-    meta: {
-      login: false,
-      title: '勝利球拍 Drive X R'
-    }
   }
+
 ]
 
 const router = new VueRouter({

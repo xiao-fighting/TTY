@@ -1,7 +1,7 @@
 <template>
     <div id="memberInf">
         <section>
-          <h2 class="text">會員資料修改</h2>
+          <h2 class="text text-info ml-4 mt-4">會員資料修改</h2>
           <b-form class="d-flex flex-column" @submit="onSubmit">
             <b-form-group id="memberInf1" label-cols-sm="3" label-cols-lg="2" label="中文全名 :" label-for="input1" label-align-sm="right" class="mt-4">
               <b-form-input id="input1" class="col-sm-11" v-model="form.name"></b-form-input>

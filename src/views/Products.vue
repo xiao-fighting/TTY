@@ -14,7 +14,7 @@
             <router-link to="/products/limited"><h4>◆限量組合包</h4></router-link>
           </div>
           <div class="col-8 col-md-9">
-            <router-view class="bg-warning"></router-view>
+            <router-view></router-view>
             </div>
         </section>
       </div>

@@ -6,6 +6,7 @@
         b-btn(variant="danger" @click="delCart(data.index)") 刪除
     h5.text-center 總共{{cart.length}} 個商品
     h5.text-center 總共{{ totalPrice}} 元
+
 </template>
 
 <script>

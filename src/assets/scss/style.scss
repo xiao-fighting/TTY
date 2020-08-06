@@ -124,7 +124,6 @@ footer{
       text-align: justify;
       // background: white;
     }
-    
 
     //viedoAbout
 
@@ -270,6 +269,12 @@ footer{
       h4,p{
         text-align: center;
         // margin-top: 1rem;
+      }
+      p{
+        letter-spacing:1px;
+        line-height:30px;
+        text-align: justify;
+        margin: 0.5rem;
       }
    
     }

@@ -1,21 +1,26 @@
 <template>
   <div id="vt">
     <div class="container">
-      <div class="row">
+      <div>
         <!-- <div class="col"> -->
-          <router-link  to='/vtxr'>
-            <b-card v-for="(item, index) in items" :key="index">
-              <!-- <b-card-title>{{item.text}}</b-card-title> -->
-              <b-card-img :src="item.image" ></b-card-img>
-              <b-card-text>{{item.text}}</b-card-text>
-              <div class="d-flex">
-                <b-card-text><del>{{item.discountPrice}}</del></b-card-text>
-                <b-card-text>{{item.price}}</b-card-text>
-              </div>
-              <!-- <b-button variant="outline-info" @click="addCart(data)">
-                <font-awesome-icon :icon="['fas', 'cart-arrow-down']"></font-awesome-icon>
-              </b-button> -->
-            </b-card>
+          <router-link  to='/products/vtxr' class="text-decoration-none">
+            <div class="row">
+              <b-card v-for="(item, index) in items" :key="index" class="col-6 col-lg-4 vtcard">
+                <!-- <b-card-title>{{item.text}}</b-card-title> -->
+                <b-card-img :src="item.image" class="vtimg"></b-card-img>
+                <b-card-header>
+                  <b-card-title class="font">{{item.text}}</b-card-title>
+                  <div class="d-flex">
+                    <b-card-text class="mr-5"><del>{{item.price}}</del></b-card-text>
+                    <b-card-text>{{item.discountPrice}}</b-card-text>
+                  </div>
+                </b-card-header>
+
+                <!-- <b-button variant="outline-info" @click="addCart(data)">
+                  <font-awesome-icon :icon="['fas', 'cart-arrow-down']"></font-awesome-icon>
+                </b-button> -->
+              </b-card>
+            </div>
           </router-link>
         <!-- </div> -->
         <!-- <div class="col">dvcvcxv</div> -->
@@ -68,16 +73,31 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-#facialMask{
+<style lang="scss" >
+#vt{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
-  // .card{
-  //   border: 0px solid red;
+  // .vtcard{
+  //   flex-direction: column;
   // }
+  .card{
+    background: transparent;
+    border: none !important;
+
+    .card-body{
+      padding: 0;
+      // margin: -1rem;
+    }
+    .card-header{
+      background: #0b2637;
+  }
+  .font{
+    font-size: 25px;
+  }
+  }
+
 }
 .price{
   display: flex;

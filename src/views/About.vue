@@ -4,13 +4,13 @@
       <div class="row">
         <b-card no-body class="firstCard">
           <b-tabs v-model="tabIndex" align="right">
-            <b-tab no-body title="2020年" :title-link-class="tabsClass(0)">
+            <b-tab no-body title="技術特點" :title-link-class="tabsClass(0)">
               <div class="row">
                 <div class="col-6 p-0">
-                  <b-card-img src="https://picsum.photos/400/300/?random=1"></b-card-img>
+                  <b-card-img src="https://raw.githubusercontent.com/xiao-fighting/images/master/about01.jpg?token=AOUPZQBE7BKQC6ZT6G4LABS7FOGK4" class="bbbbb"></b-card-img>
                     </div>
-                <div class="col-6">
-                  <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudantium voluptates quidem quasi fuga ex tempora necessitatibus, impedit provident praesentium odio eligendi unde nemo voluptate dolor officiis sequi earum consequuntur non quis corporis! Sit ipsam itaque quam, cupiditate error fuga iure?</b-card-text>
+               <div class="col-6">
+                  <b-card-text v-html="one"></b-card-text>
                 </div>
                </div>
              </b-tab>
@@ -20,11 +20,12 @@
                   <b-card-img src="https://picsum.photos/400/300/?random=2"></b-card-img>
                 </div>
                 <div class="col-6">
-                  <b-card-text v-html="one"></b-card-text>
+                  <b-card-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum reprehenderit corporis fugiat iste quidem, dolores quis aperiam. A laudant</b-card-text>
                 </div>
+
               </div>
             </b-tab>
-             <b-tab no-body title="1234" :title-link-class="tabsClass(2)">
+             <b-tab no-body title="經典名言" :title-link-class="tabsClass(2)">
                <div class="row">
                  <div class="col-6 p-0">
                   <b-card-img src="https://picsum.photos/400/300/?random=3"></b-card-img>
@@ -67,23 +68,23 @@
                     <b-card-group deck>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
-                        <h4 >教練賴建誠</h4>
+                        <h4 class="my-3">教練賴建誠</h4>
                         <p>在戰術的觀察及訓練計畫的擬定上，針對戴資穎失分的部分加強訓練，注重比賽過程的遠超過比賽結果</p>
                       </b-card>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
-                        <h4 >教練萬佳鑫</h4>
-                        <p >在戰術的觀察及訓練計畫的擬定上，針對戴資穎失分的部分加強訓練，注重比賽過程的遠超過比賽結果</p>
+                        <h4 class="my-3">教練萬佳鑫</h4>
+                        <p >曾經是台灣男子羽球選手，現任戴資穎專屬教練，平常訓練模擬戴資穎身高較高的對手。</p>
                       </b-card>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
-                        <h4>防護員王詩婷</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere corporis reprehenderit perferendis velit maxime illum atque omnis qui eveniet?</p>
+                        <h4 class="my-3">防護員王詩婷</h4>
+                        <p>無論是在戴資穎平時訓練或參加比賽，賽前的暖身及賽後的收操，都會陪伴在身邊。</p>
                       </b-card>
                       <b-card class="cardAbout col-12 col-sm-6 col-lg-3">
                         <img src="https://picsum.photos/600/300/?image=25" class="teamImg img-fluid rounded-circle" >
-                        <h4>體能師范瓚予</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere corporis reprehenderit perferendis velit maxime illum atque omnis qui eveniet?</p>
+                        <h4 class="my-3">體能師范瓚予</h4>
+                        <p>針對戴資穎的體能進行訓練，提升反應力，使用遊戲的方式始使得訓練過程不枯燥。</p>
                       </b-card>
                     </b-card-group>
                   </div>
