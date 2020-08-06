@@ -7,7 +7,7 @@
             <b-tab no-body title="技術特點" :title-link-class="tabsClass(0)">
               <div class="row">
                 <div class="col-6 p-0">
-                  <b-card-img src="https://raw.githubusercontent.com/xiao-fighting/images/master/about01.jpg?token=AOUPZQHQY2R6GWYMH7SLVWC7FOI2O"></b-card-img>
+                  <b-card-img src="http://220.128.133.15/s1090114/1596691413491.jpg"></b-card-img>
                     </div>
                <div class="col-6">
                   <b-card-text v-html="one"></b-card-text>
