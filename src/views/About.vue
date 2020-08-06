@@ -14,7 +14,7 @@
                 </div>
                </div>
              </b-tab>
-             <b-tab no-body title="技術特點" :title-link-class="tabsClass(1)">
+             <b-tab no-body title="2020" :title-link-class="tabsClass(1)">
               <div class="row">
                 <div class="col-6 p-0">
                   <b-card-img src="https://picsum.photos/400/300/?random=2"></b-card-img>
