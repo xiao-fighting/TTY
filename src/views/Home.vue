@@ -25,8 +25,6 @@
 
       </template>
     </section>
-   
-
   </div>
 </template>
 
