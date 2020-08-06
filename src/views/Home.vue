@@ -25,7 +25,7 @@
 
       </template>
     </section>
-    <section id="section03"><a href="https://www.instagram.com/p/B6y9j8FFjiD/?utm_source=ig_web_button_share_sheet">https://www.instagram.com/p/B6y9j8FFjiD/?utm_source=ig_web_button_share_sheet</a></section>
+   
 
   </div>
 </template>
