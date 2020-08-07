@@ -4,18 +4,18 @@
           <h2 class="text text-info ml-4 mt-4">會員資料修改</h2>
           <b-form class="d-flex flex-column" @submit="onSubmit">
             <b-form-group id="memberInf1" label-cols-sm="3" label-cols-lg="2" label="中文全名 :" label-for="input1" label-align-sm="right" class="mt-4">
-              <b-form-input id="input1" class="col-sm-11" v-model="form.name"></b-form-input>
+              <b-form-input id="input1" class="col-sm-11" v-model="name"></b-form-input>
             </b-form-group>
             <b-form-group id="memberInf2" label="電子信箱 :" abel-for="input2" label-cols-sm="3" label-cols-lg="2" label-align-sm="right" class="mt-4">
               <b-form-input id="input2" class="col-sm-11" v-model="email">
               </b-form-input>
             </b-form-group>
             <b-form-group id="memberInf3" label="手機號碼 :" abel-for="input3" label-cols-sm="3" label-cols-lg="2" label-align-sm="right" class="mt-4">
-              <b-form-input id="input3" class="col-sm-11" v-model="form.cellphone">
+              <b-form-input id="input3" class="col-sm-11" v-model="cellphone">
               </b-form-input>
             </b-form-group>
             <b-form-group id="memberInf4" label="聯絡地址 :" abel-for="input4" label-cols-sm="3" label-cols-lg="2" label-align-sm="right" class="mt-4">
-              <b-form-input id="input4" class="col-sm-11" v-model="form.address">
+              <b-form-input id="input4" class="col-sm-11" v-model="address">
               </b-form-input>
             </b-form-group>
             <div class="d-flex justify-content-center my-4" >
