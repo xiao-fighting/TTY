@@ -96,7 +96,7 @@ $cqColor:#BBDEFB;
 #questions{
   .container{
 
-  max-width: 60% !important;
+  max-width: 80% !important;
   // margin: auto;
   min-height: 90vh;
 }

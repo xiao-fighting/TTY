@@ -22,6 +22,15 @@ $color5: rgb(18, 111, 128) !important;
   color: #e64b84 !important;
 }
 
+.text-pink123456 {
+  color: #e64b84 !important;
+  font-size: 22px;
+  // letter-spacing: 2px;
+  // margin-top: -10px;
+  // width: 20px;
+  // height: 20px;
+}
+
 .container{
   max-width: 80% !important;
   margin: auto;
@@ -59,7 +68,11 @@ footer{
 
 #about{  
   // filter: opacity(100%);
-
+    .container{
+      max-width: 75% !important;
+      // margin: auto;
+      // min-height: 90vh;
+    }
   
     .centerviedo{
       margin-top: 5rem;
@@ -100,14 +113,69 @@ footer{
     }
 
     .nav-item{
-      width: 12.5%;
+      width: 25%;
       text-align: center;
     }
     @media (max-width:767px){
       .nav-item{
-        width: 25%;
+        width: 50%;
         // margin:0.05rem;
       }
+    }
+
+    @media (min-width:1px) and (max-width:767px){
+
+      .ttyWords{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        // margin-right: -15px;
+        // margin-left: -15px;
+        flex-direction: column;
+    }
+    
+    .wordsImg{
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    .wordsWords{
+      -ms-flex:0 0 100%;
+      flex:0 0 100%;
+      max-width: 100%;
+    }
+  }
+    
+      @media (min-width:768px) and (max-width:1900px){
+      .ttyWords{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        // margin-right: -15px;
+        // margin-left: -15px;
+        flex-direction: row;
+      }
+
+      .wordsImg{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      
+      .wordsWords{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        .card-text{
+          padding: 20px;
+        }
+      }
+      // .text-pink123456{
+      //   padding: 2rem;
+      // }
     }
 
     .firstCard{
@@ -116,7 +184,7 @@ footer{
       background: transparent;
     }
     .card-text{
-      margin: 1rem;
+      margin-right: 1rem;
       padding: 1rem;
       // padding-right: 0;
       letter-spacing:1px;
@@ -139,7 +207,7 @@ footer{
       margin-bottom: 1rem;
       position: relative;
       object-fit:cover;
-      box-shadow: 5px 10px 10px black;
+      box-shadow: 5px 5px 10px #333;
       // background-repeat: no-repeat;
     }
     .imageAbout:hover::before{
@@ -158,7 +226,7 @@ footer{
 
     .imageAbout span{
       position: absolute;
-      bottom: -60px;
+      bottom: -50px;
       // margin-bottom: -1rem;
       font-size: 25px;
     }
@@ -172,7 +240,7 @@ footer{
     .imageAbout:hover p{
       color: white;   
       display: inline-block;
-      font-size: 20px;
+      font-size: 16px;
       // box-shadow: 1px 10px 10px black;
       position: absolute;
       top: 50%;
@@ -260,13 +328,9 @@ footer{
     .cardAbout>.card-body{
       display: flex;
       flex-direction: column;
-      // justify-content: space-around;
-      // flex-wrap: wrap;
-      // &:hover{
-      //   transform: translateY(-50px);
-      // }
+      padding: 0.5rem !important;
       
-      h4,p{
+      h5,p{
         text-align: center;
         // margin-top: 1rem;
       }
@@ -274,17 +338,20 @@ footer{
         letter-spacing:1px;
         line-height:30px;
         text-align: justify;
-        margin: 0.5rem;
+        margin: 0.025rem;
       }
    
     }
-
+   
     .teamImg{
+      border-radius: 50%;
+      // width: 200px !important;
+      // height: 200px !important;
       // margin-top: 2rem !important;
-      width: 200px;
-      height: 200px;
+      // width: 75%;
       display: block;
       margin: auto;
+      border: 1px solid white;
     }
 
     @media (max-width:575px){
@@ -293,14 +360,28 @@ footer{
           transform: translateY(0px);
         }
       }
-      h4,p{
-        margin-top: 0;
+      h5,p{
+        // margin-top: 0;
+        text-align: left;
       }
     }
 }
 
 //賽事訊息
 #raceinformations{
+  .raceComing{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  @media (min-width:768.1px) and (max-width:1600px){
+    .raceComing{
+      display:flex;
+      flex-direction: row;
+    }
+  }
+
   
   .cardHeader{
     border: 0px solid red;
@@ -308,6 +389,10 @@ footer{
   .card{
     border: 0px solid blue;
     background:rgba(255,255,255,0.2);
+  }
+
+  .card-text{
+    text-align: justify;
   }
   .raceInf{
     max-width: 50vw;
@@ -344,19 +429,19 @@ footer{
   
   .imageAbout p{
     display: none;
-    border: 10px double white;
+    border: 8px double white;
   }
   
   .imageAbout:hover p{
     color: white;
     display: inline-block;
-    font-size: 20px;
+    font-size: 12px;
     // box-shadow: 1px 10px 10px black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
-    padding: 0.5rem;
+    padding: 5px;
     cursor: pointer;
   }
   @media (max-width: 767px){

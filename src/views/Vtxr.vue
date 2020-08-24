@@ -6,7 +6,7 @@
           <img src="https://shoplineimg.com/5a13bfa1d4e39596590001eb/5ee79957a8927b2b89eb7e74/800x.webp?source_format=jpg">
         </div>
         <div class="col-6">
-          <h5>461516</h5>
+          <!-- <h5>461516</h5> -->
         </div>
       </div>
     </div>

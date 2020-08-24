@@ -22,7 +22,6 @@
       <template>
           <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.2">
         <Timeline :timeline-items="timelineItems" :message-when-no-items="messageWhenNoItems" :unique-year="true" order="asc"/>
-
       </template>
     </section>
   </div>
@@ -333,13 +332,14 @@ export default {
       object-fit: contain;
       // margin-top: 3rem;
     }
-    @media (max-width: 576px){
+    @media (min-width:0px) and (max-width: 576px){
       .timeline-item .title-item[data-v-5c5ef65f]{
         font-size:25px !important;
         }
 
       .timeline[data-v-30ba92e0]{
-        margin-left: 1rem;
+        margin-left: 0rem;
+        padding-right: 2rem;
         // padding-right: 100px;
         text-align:left;
         width:100%;
@@ -372,13 +372,14 @@ export default {
         text-align:left;
         width:100%;
         max-width:600px;
-        }
+       }
        .sec02img{
           position: absolute;
-          left: 20%;
+          left: 25%;
+          top: 210%;
           width: 100%;
-          // bottom: -93%;
-          max-width: 80%;
+          // bottom: 0%;
+          max-width: 75%;
           margin-top: 0.5rem;
           filter: opacity(12%);
         }

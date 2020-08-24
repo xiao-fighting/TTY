@@ -5,13 +5,13 @@
         <!-- <div class="col"> -->
           <router-link  to='/products/vtxr' class="text-decoration-none">
             <div class="row">
-              <b-card v-for="(item, index) in items" :key="index" class="col-6 col-lg-4 vtcard">
+              <b-card v-for="(item, index) in items" :key="index" class="col-12 col-md-6 col-lg-5 vtcard mb-3">
                 <!-- <b-card-title>{{item.text}}</b-card-title> -->
                 <b-card-img :src="item.image" class="vtimg"></b-card-img>
                 <b-card-header>
                   <b-card-title class="font">{{item.text}}</b-card-title>
-                  <div class="d-flex">
-                    <b-card-text class="mr-5"><del>{{item.price}}</del></b-card-text>
+                  <div class="font2">
+                    <b-card-text class="font3 mr-1"><del>{{item.price}}</del></b-card-text>
                     <b-card-text>{{item.discountPrice}}</b-card-text>
                   </div>
                 </b-card-header>
@@ -92,12 +92,24 @@ export default {
     }
     .card-header{
       background: #0b2637;
-  }
-  .font{
-    font-size: 25px;
-  }
-  }
+    }
 
+    .font{
+      font-size: 17px;
+    }
+    .font2{
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    .font3{
+      font-size: 11px;
+    }
+  }
+}
+.vtimg{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .price{
   display: flex;

@@ -1,11 +1,11 @@
 <template>
-  <div id="raceinformations" :style="{backgroundImage:`url('./images/bg.jpg')`}">
+  <div id="raceinformations">
     <div class="container">
       <div class="row">
         <section class="mt-5 w-100">
           <h2>即將登場</h2>
             <template>
-              <div role="tablist" class="mt-3 d-flex">
+              <div role="tablist" class="mt-3 raceComing">
                 <b-card no-body class="mb-1 col" v-for="(text, index) in texts" :key="index">
                   <b-card-header header-tag="header" class="p-1 cardHeader" role="tab">
                     <b-button block v-b-toggle="'accordion-'+index" variant="info" size="lg">{{text.title}}</b-button>
@@ -28,9 +28,11 @@
             <h2 class="mb-3">精彩片段</h2>
             <template>
               <CoolLightBox :items="items" :index="index" @close="index = null"></CoolLightBox>
-              <div class="images-wrapper" >
+              <div class="images-wrapper d-flex justify-content-between" >
                 <div class="image imageAbout" v-for="(image, imageIndex) in items" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                <p >{{image.text}}</p>
+                  <p>{{image.text}}</p>
+                  <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
+                  <span>{{image.title}}</span>
                 </div>
               </div>
             </template>
@@ -41,19 +43,23 @@
               <agile>
                 <template >
                   <CoolLightBox :items="items2" :index="index" @close="index = null"></CoolLightBox>
-                    <div class="images-wrapper" >
-                          <div class="image imageAbout" v-for="(image, imageIndex) in items2" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                          <p >{{image.text}}</p>
-                          </div>
+                  <div class="images-wrapper d-flex justify-content-between" >
+                    <div class="image imageAbout" v-for="(image, imageIndex) in items2" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
+                      <p>{{image.text}}</p>
+                      <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
+                      <span>{{image.title}}</span>
                     </div>
+                  </div>
                 </template>
                 <template >
                   <CoolLightBox :items="items3" :index="index" @close="index = null"></CoolLightBox>
-                    <div class="images-wrapper" >
-                          <div class="image imageAbout" v-for="(image, imageIndex) in items3" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                          <p >{{image.text}}</p>
-                          </div>
+                  <div class="images-wrapper d-flex justify-content-between" >
+                    <div class="image imageAbout" v-for="(image, imageIndex) in items3" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
+                      <p>{{image.text}}</p>
+                      <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
+                      <span>{{image.title}}</span>
                     </div>
+                  </div>
                 </template>
                 <template slot="prevButton">
                   <font-awesome-icon :icon="['fas','chevron-left']"></font-awesome-icon>

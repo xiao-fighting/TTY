@@ -7,7 +7,7 @@
         </div>
         <div class="col-6 vv">
           <div class="des">
-            <h2 class="mt-1">{{items.text}}</h2>
+            <h3 class="mt-1">{{items.text}}</h3>
             <div class="d-flex mt-5">
               <p><del>{{items.price}}</del></p>
               <p class="ml-5">{{items.discountPrice}}</p>
