@@ -24,11 +24,7 @@ $color5: rgb(18, 111, 128) !important;
 
 .text-pink123456 {
   color: #e64b84 !important;
-  font-size: 22px;
-  // letter-spacing: 2px;
-  // margin-top: -10px;
-  // width: 20px;
-  // height: 20px;
+  font-size: 22px; 
 }
 
 .container{
@@ -49,10 +45,10 @@ $color5: rgb(18, 111, 128) !important;
         width: 80px;
     }
     .aaa{
-        font-size: 30px;
+        font-size: 25px;
     }
     .cart01{
-        width:30px;
+        width:25px;
         margin-top: -8px;
     }
 }
@@ -84,6 +80,9 @@ footer{
     .text-lighted{
       color:white;
     }
+    .text-darked{
+      color:black;
+    }
     a.text-lighted:hover,
     a.text-lighted:focus {
       color: black !important;
@@ -94,7 +93,6 @@ footer{
 
     .tabs{
       border:0px solid red ;
-      // background: transparent!important;
     }
 
  
@@ -102,11 +100,7 @@ footer{
       // display:flex;
       background: rgba(255, 255, 255,0.5);
     }
-
-
-    // .nav{
-    //   border: 1px solid transparent !important;
-    // }
+    
     .nav-tabs{
       border: 1px solid transparent;
       
@@ -148,7 +142,7 @@ footer{
     }
   }
     
-      @media (min-width:768px) and (max-width:1900px){
+      @media (min-width:768px) and (max-width:2400px){
       .ttyWords{
         display: -ms-flexbox;
         display: flex;
@@ -172,10 +166,7 @@ footer{
         .card-text{
           padding: 20px;
         }
-      }
-      // .text-pink123456{
-      //   padding: 2rem;
-      // }
+      }    
     }
 
     .firstCard{
@@ -315,8 +306,6 @@ footer{
         font-size: 40px;
       }
     }
-
-
     
     .cardAbout{
       background: rgba(255,255,255,0.5);
@@ -345,10 +334,6 @@ footer{
    
     .teamImg{
       border-radius: 50%;
-      // width: 200px !important;
-      // height: 200px !important;
-      // margin-top: 2rem !important;
-      // width: 75%;
       display: block;
       margin: auto;
       border: 1px solid white;
@@ -375,7 +360,7 @@ footer{
     
   }
 
-  @media (min-width:768.1px) and (max-width:1600px){
+  @media (min-width:768.1px) and (max-width:2400px){
     .raceComing{
       display:flex;
       flex-direction: row;
@@ -397,27 +382,14 @@ footer{
   .raceInf{
     max-width: 50vw;
   }
+
   .images-wrapper{
     width: 100%;
     // margin-top: 3rem;
     height: 100%;
-    display: flex !important;
-    justify-content: space-between!important;
-    flex-wrap: wrap;
-  }
-  
-  .imageAbout{
-    width: 24%;
-    height: 25vmin;
-    // margin-bottom: 1rem;
-    margin: 0.25rem;
-    position: relative;
-    object-fit:cover;
-    // box-shadow: 1px 5px 15px black;
-    // background-repeat: no-repeat;
-    
-  }
 
+  }
+ 
   .imageAbout:hover::before{
     content: '';
     width: 100%;
@@ -426,43 +398,115 @@ footer{
     backdrop-filter: brightness(35%);
     cursor: pointer;
   }
-  
+
   .imageAbout p{
     display: none;
-    border: 8px double white;
+    border: 10px double white;
+  }
+
+  .imageAbout span{
+    position: absolute;
+    bottom: -50px;
+    // margin-bottom: -1rem;
+    font-size: 25px;
+  }
+
+  .fa-play-circle{
+    position: absolute;
+    margin: 1rem;
+    font-size: 40px;
   }
   
   .imageAbout:hover p{
-    color: white;
+    color: white;   
     display: inline-block;
-    font-size: 12px;
+    font-size: 16px;
     // box-shadow: 1px 10px 10px black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
-    padding: 5px;
+    padding: 0.5rem;
     cursor: pointer;
   }
-  @media (max-width: 767px){
-      .imageAbout{
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: 50vmin;
-        margin-bottom: 2rem;
-      
-      }
-    }
-    @media (max-width:991px){
-      .imageAbout{
-        width: 46%;
-        margin-bottom: 2rem;
-      }
-    }
 
-    #carousel-1{
-      z-index: 999;
+  .imageAbout:hover span, .imageAbout:hover svg{
+    display: none;
+  }
+
+  @media (max-width:960px){
+    // .imageAbout{
+    //   margin-bottom: 5rem;
+
+    // }
+    .imageAbout span{
+      position: absolute;
+      // bottom: -50px !important;
+      // margin-bottom: -1rem;
+      font-size: 20px;
     }
+    svg{
+      position: absolute;
+      margin:0.2rem;
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 767px){
+    .images-wrapper{
+      flex-wrap:wrap
+    }
+    .imageAbout{
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: 60vmin;
+      margin-bottom: 4rem;
+
+    }
+    
+    .imageAbout span{
+      position: absolute;
+      bottom: -60px;
+      font-size: 25px;
+
+    }
+    svg{
+      position: absolute;
+      margin: 1rem;
+      font-size: 50px;
+    }
+    
+  }
+
+  @media (max-width:575px){
+    .imageAbout{
+      margin-bottom: 5rem;
+
+    }
+    .imageAbout span{
+      position: absolute;
+      bottom: -60px;
+      // margin-bottom: -1rem;
+      font-size: 25px;
+    }
+    svg{
+      position: absolute;
+      margin: 0.6rem;
+      font-size: 40px;
+    }
+  }
+
+  .imageAbout{
+    width: 24%;
+    height: 25vmin;
+    // margin-bottom: 1rem;
+    margin: 0.25rem;
+    position: relative;
+    object-fit:cover;
+    border: 1px solid white;
+    
+  }  
+  
   }
 
 // VueAgile styles

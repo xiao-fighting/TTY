@@ -6,7 +6,7 @@
       <template>
         <agile ref="carousel" :autoplay="true" :speed="1000" :autoplaySpeed="10000" :fade="false">
           <img class="slide" src="../../public/images/02.jpg">
-          <img class="slide " src="../../public/images/03.jpg">
+          <!-- <img class="slide " src="../../public/images/03.jpg"> -->
           <img class="slide" src="../../public/images/00.jpg">
           <template slot="prevButton">
             <font-awesome-icon :icon="['fas','chevron-left']"></font-awesome-icon>
@@ -20,8 +20,8 @@
     </div>
     <section id="section02">
       <template>
-          <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.2">
-        <Timeline :timeline-items="timelineItems" :message-when-no-items="messageWhenNoItems" :unique-year="true" order="asc"/>
+          <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.5">
+        <Timeline class="mb-5" :timeline-items="timelineItems" :message-when-no-items="messageWhenNoItems" :unique-year="true" order="asc"/>
       </template>
     </section>
   </div>
@@ -137,7 +137,10 @@ export default {
   //   position: relative;
   // }
 
- #section01,#section02,#section03{
+//  #section01{
+//    height: 20%;
+//  }
+ #section02,#section03{
   //  overflow: hidden;
   height: 100% !important;
 
@@ -239,8 +242,8 @@ export default {
       width: 100%;
       height: 100%;
       // max-width: 100%
-      object-position: top;
-
+      // object-position: top;
+      // object-fit: cover;
     }
 
 }
@@ -332,6 +335,7 @@ export default {
       object-fit: contain;
       // margin-top: 3rem;
     }
+
     @media (min-width:0px) and (max-width: 576px){
       .timeline-item .title-item[data-v-5c5ef65f]{
         font-size:25px !important;
@@ -376,7 +380,7 @@ export default {
        .sec02img{
           position: absolute;
           left: 25%;
-          top: 210%;
+          top: 120%;
           width: 100%;
           // bottom: 0%;
           max-width: 75%;
@@ -397,6 +401,7 @@ export default {
           position: absolute;
           right: 8%;
           width: 40%;
+          top:205%;
           // bottom: -93%;
           max-width: 80%;
           margin-top: 5rem;

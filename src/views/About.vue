@@ -1,5 +1,5 @@
 <template>
-  <div id="about" :style="{backgroundImage:`url('./images/bg.jpg')`}">
+  <div id="about">
     <div class="container">
       <div class="row">
         <b-card no-body class="firstCard">
@@ -132,9 +132,9 @@ export default {
   methods: {
     tabsClass (idx) {
       if (this.tabIndex === idx) {
-        return ['bg-cyan', 'text-lighted']
+        return ['bg-info', 'text-white']
       } else {
-        return ['bg-info ', 'text-white']
+        return ['bg-cyan', 'text-darked']
       }
     }
   }

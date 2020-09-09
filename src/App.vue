@@ -23,7 +23,11 @@
       router-view
     footer(class="ttyfooter")
       font-awesome-icon(:icon="['far','copyright']" class="text-white")
-      span 圖片來源: victor、ilovetty
+      span 圖片來源: victor、ilovetty、網路
+      a(href="https://www.instagram.com/tai_tzuying/")
+        img(src="../public/images/ig.png" class="cart01 ml-5")
+      a(href="https://www.facebook.com/%E6%88%B4%E8%B3%87%E7%A9%8E-Tai-Tzu-Ying-164965326883996/")
+        img(src="../public/images/fb.png" class="cart01 mx-3")
 </template>
 <script>
 export default {

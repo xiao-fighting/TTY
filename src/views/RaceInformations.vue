@@ -27,47 +27,69 @@
           <section class="my-5 w-100">
             <h2 class="mb-3">精彩片段</h2>
             <template>
-              <CoolLightBox :items="items" :index="index" @close="index = null"></CoolLightBox>
-              <div class="images-wrapper d-flex justify-content-between" >
-                <div class="image imageAbout" v-for="(image, imageIndex) in items" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                  <p>{{image.text}}</p>
-                  <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
-                  <span>{{image.title}}</span>
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/EHt_nLLMYWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年全英公開賽冠亞軍 戴資穎 VS 陳雨菲</p>
                 </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/J9EQ33hwH88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年全英公開賽四強 戴資穎 VS 馬琳</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/qoNDa-RfS7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年全英公開賽八強 戴資穎 VS 李美妙</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/gyuQ07Q7czc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年馬來西亞羽球大師賽冠亞軍 戴資穎 VS 陳雨菲</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/MKnfVNsiA1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2019年丹麥羽球公開賽冠亞軍 戴資穎 VS 奧原希望</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/KzRk4-ln2uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2019新加坡公開賽女單四強 戴資穎 VS 山口茜</p>
+                </div>
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                  <iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/B8DcFUylSLP/embed/captioned/?cr=1&amp;v=12&amp;wp=717&amp;rd=https%3A%2F%2Fletswritetw.github.io&amp;rp=%2Fletswrite-instagram-embed%2F#%7B%22ci%22%3A0%2C%22os%22%3A31151.745000010123%2C%22ls%22%3A488.7350000208244%2C%22le%22%3A488.7350000208244%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="458" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 658px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe>
+
+                </div> -->
               </div>
             </template>
           </section>
-          <section class="my-5 w-100">
+          <section class="mb-5 w-100">
           <h2 class="mb-3">經典賽事</h2>
           <template>
-              <agile>
-                <template >
-                  <CoolLightBox :items="items2" :index="index" @close="index = null"></CoolLightBox>
-                  <div class="images-wrapper d-flex justify-content-between" >
-                    <div class="image imageAbout" v-for="(image, imageIndex) in items2" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                      <p>{{image.text}}</p>
-                      <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
-                      <span>{{image.title}}</span>
-                    </div>
+            <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <iframe src="https://www.youtube.com/embed/QD7ZxoVp8xw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>2020全英公開賽冠亞軍 戴資穎 VS 陳雨菲 </p>
                   </div>
-                </template>
-                <template >
-                  <CoolLightBox :items="items3" :index="index" @close="index = null"></CoolLightBox>
-                  <div class="images-wrapper d-flex justify-content-between" >
-                    <div class="image imageAbout" v-for="(image, imageIndex) in items3" :key="imageIndex" @click="index = imageIndex" :style="{ background: 'url(' + image.thumb + ')', backgroundSize:'cover',backgroundPosition:'center'}">
-                      <p>{{image.text}}</p>
-                      <font-awesome-icon :icon="['far', 'play-circle']" class="text-white"></font-awesome-icon>
-                      <span>{{image.title}}</span>
-                    </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <iframe src="https://www.youtube.com/embed/HVR7KSJM1XM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>2020全英公開賽四強 戴資穎 VS 馬琳 </p>
                   </div>
-                </template>
-                <template slot="prevButton">
-                  <font-awesome-icon :icon="['fas','chevron-left']"></font-awesome-icon>
-                </template>
-                <template slot="nextButton">
-                  <font-awesome-icon :icon="['fas','chevron-right']"></font-awesome-icon>
-                </template>
-              </agile>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/MiEE-2U46Ng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年全英公開賽八強 戴資穎 VS 李美妙 </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/sNhERoXFi58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年馬來西亞羽球大師賽四強 戴資穎 VS 何冰嬌 </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <iframe src="https://www.youtube.com/embed/JVy_JRNOmm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2020年馬來西亞羽球大師賽八強 戴資穎 VS 辛度 </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                 <iframe src="https://www.youtube.com/embed/f3J9a8l81gM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>2019年丹麥羽球公開賽冠亞軍 戴資穎 VS 奧原希望</p>
+                </div>
+            </div>
+
           </template>
           </section>
         </div>
@@ -100,142 +122,9 @@ export default {
         }
       ],
       tabIndex: 0,
-      items: [
-        {
-          title: '2020全英公開賽 小戴奪冠精彩片段',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        },
-        {
-          title: '2',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        },
-        {
-          title: '2020全英公開賽女單八強戰-小戴',
-          description: '',
-          thumb: 'https://picsum.photos/600/300/?image=25',
-          src: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '123',
-          description: '',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '456',
-          description: '',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '912',
-          description: '',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '012',
-          description: '',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
-          src: '',
-          text: 'play the video'
-        }
-      ],
-      items2: [
-        {
-          title: '2020全英公開賽 小戴奪冠精彩片段',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        },
-        {
-          title: '2',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        },
-        {
-          title: '2020全英公開賽女單八強戰-小戴',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        },
-        {
-          title: '789',
-          description: '',
-          thumb: '',
-          src: '',
-          text: 'play the video'
-        }
-      ],
-      items3: [
-        {
-          title: '3-1',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        },
-        {
-          title: '3-2',
-          description: '影片來源: 愛爾達體育家族 ELTA Sports',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
-          src: 'https://youtu.be/4jE_ZZGjT9k',
-          text: 'play the video'
-        }
-      ],
       index: null,
       slide: 0,
       sliding: null
-
     }
   },
   methods: {

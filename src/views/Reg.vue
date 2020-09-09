@@ -6,7 +6,7 @@
           <div class="aim">
             <h2>成為會員</h2>
             <p>讓我們一起購買周邊商品，去球場為她加油~</p>
-            <button @click="signUp= !signUp" class="btn">已成為會員</button>
+            <button @click="signUp= !signUp" class="btn">已成為會員<span class="smile">😊</span></button>
           </div>
           <!-- <h1 class="text-center col-12">註冊</h1> -->
           <!-- <div class="justify-content-center row"> -->
@@ -256,6 +256,9 @@ flex-box {
 }
 
 #reg{
+    .smile{
+      font-size: 20px;
+    }
     @extend flex-box;
     height:100%;
     background-color: $blue;
@@ -292,18 +295,19 @@ flex-box {
       }
       .btn:not(.ccc){
         // margin-top: 5rem;
-        font-size:25px;
+        font-size:16px;
+        margin-bottom: 5px;
         &:focus {
             outline: none !important;
             box-shadow: none;
         }
       }
       h2{
-        font-size:50px;
+        font-size:35px;
         text-align: center;
       }
       p{
-        font-size:20px;
+        font-size:16px;
         margin-top:1vh;
         margin-bottom:3vh;
         text-align: center;
@@ -335,7 +339,7 @@ flex-box {
         }
       }
       .formArea{
-        // padding:3%;
+        padding-top:15px;
         background-color:$white;
         height:100%;
         // width:60%;

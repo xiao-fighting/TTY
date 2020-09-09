@@ -106,6 +106,7 @@ $cqColor:#BBDEFB;
   }
  .nav-pills .nav-link.active{
     background: #17a2b8;
+    color: white;
   }
   // .nav-link{
   //   background: teal;
@@ -126,7 +127,7 @@ $cqColor:#BBDEFB;
     padding-top: 1rem;
   }
   a{
-    color: white;
+    color: black;
   }
   .cq{
     .card-header{
