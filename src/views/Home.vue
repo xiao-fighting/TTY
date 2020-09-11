@@ -20,7 +20,7 @@
     </div>
     <section id="section02">
       <template>
-          <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.5">
+          <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.2">
         <Timeline class="mb-5" :timeline-items="timelineItems" :message-when-no-items="messageWhenNoItems" :unique-year="true" order="asc"/>
       </template>
     </section>
@@ -133,37 +133,12 @@ export default {
     color: #17a2b8 !important;
   }
 }
-  // #section01{
-  //   position: relative;
-  // }
-
-//  #section01{
-//    height: 20%;
-//  }
  #section02,#section03{
-  //  overflow: hidden;
   height: 100% !important;
-
   }
 
-  // @media (max-width:576px){
-  //    #section01,#section02,#section03{
-  //     height: 100%;
-
-  //   }
-  // }
-  // @media (min-width:992px){
-  //   #section01,#section02,#section03{
-  //     // position: relative;
-  //     height: 100%;
-
-  //   }
-  // }
-
   section:nth-last-child(even){
-    // background: lightblue;
     height: 100%;
-    // display: block;
   }
 
 #home{
@@ -238,12 +213,8 @@ export default {
     // Slides styles
 
     .slide {
-      // object-fit: contain;
       width: 100%;
       height: 100%;
-      // max-width: 100%
-      // object-position: top;
-      // object-fit: cover;
     }
 
 }
@@ -290,7 +261,6 @@ export default {
     }
   .timeline[data-v-30ba92e0]{
     margin-left: 2rem;
-    // margin-right: -20px;
     text-align:left;
     width:100%;
     max-width:600px;
@@ -344,7 +314,6 @@ export default {
       .timeline[data-v-30ba92e0]{
         margin-left: 0rem;
         padding-right: 2rem;
-        // padding-right: 100px;
         text-align:left;
         width:100%;
         max-width:600px;
@@ -360,7 +329,6 @@ export default {
      @media (min-width:576.1px) and (max-width: 767px) {
        .timeline[data-v-30ba92e0]{
         margin-left: 0.025rem;
-        // padding-right: 100px;
         text-align:left;
         width:100%;
         max-width:600px;
@@ -372,7 +340,6 @@ export default {
      @media (min-width:768px) and (max-width:1200px){
        .timeline[data-v-30ba92e0]{
         margin-left: 0.1rem;
-        // padding-right: 100px;
         text-align:left;
         width:100%;
         max-width:600px;
@@ -382,7 +349,6 @@ export default {
           left: 25%;
           top: 120%;
           width: 100%;
-          // bottom: 0%;
           max-width: 75%;
           margin-top: 0.5rem;
           filter: opacity(12%);
@@ -392,7 +358,6 @@ export default {
      @media (min-width:1201px) and (max-width: 1920px){
        .timeline[data-v-30ba92e0]{
         margin-left: 1rem;
-        // padding-right: 100px;
         text-align:left;
         width:100%;
         max-width:600px;
@@ -402,7 +367,6 @@ export default {
           right: 8%;
           width: 40%;
           top:205%;
-          // bottom: -93%;
           max-width: 80%;
           margin-top: 5rem;
           overflow: hidden;
