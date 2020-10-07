@@ -106,21 +106,21 @@ export default {
         {
           title: '戴資穎的故事',
           description: '影片來源: Red Bull',
-          thumb: 'http://220.128.133.15/s1090114/1595379926192.jpg',
+          thumb: 'https://i.imgur.com/YysYD6X.jpg',
           src: 'https://youtu.be/E-z9LHFMz7I',
           text: 'play the video'
         },
         {
           title: '2017.05.27 戴資穎專訪',
           description: '影片來源: 民視',
-          thumb: 'http://220.128.133.15/s1090114/1595555483216.jpg',
+          thumb: 'https://i.imgur.com/Pcy9Pz4.jpg',
           src: 'https://youtu.be/nHXv3MtSocs',
           text: 'play the video'
         },
         {
           title: '2017.09.04 戴資穎專訪',
           description: '影片來源: 壹電視',
-          thumb: 'http://220.128.133.15/s1090114/1595316559931.jpg',
+          thumb: 'https://i.imgur.com/Ne0HaTL.jpg',
           src: 'https://youtu.be/sTT-6d4ITUc',
           text: 'play the video'
         }
