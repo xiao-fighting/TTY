@@ -20,7 +20,7 @@
     </div>
     <section id="section02">
       <template>
-          <img src="../../public/images/aboutsec01.jpg" class="sec02img" v-parallax.modifier="0.2">
+          <img src="../../public/images/aboutsec01.jpg" class="sec02img">
         <Timeline class="mb-5" :timeline-items="timelineItems" :message-when-no-items="messageWhenNoItems" :unique-year="true" order="asc"/>
       </template>
     </section>
@@ -129,20 +129,24 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100% ;
+  overflow: hidden;
   a{
     color: #17a2b8 !important;
   }
 }
- #section02,#section03{
+
+  #section02{
   height: 100% !important;
+  margin-top: 60px;
+  position: relative;
   }
 
-  section:nth-last-child(even){
-    height: 100%;
-  }
+  // section:nth-last-child(even){
+  //   height: 100%;
+  // }
 
 #home{
-  overflow: hidden;
+
 // VueAgile styles
     .agile {
       .agile__list{
@@ -220,8 +224,9 @@ export default {
 }
 
   #section02{
-  margin-top: 60px;
-
+    margin-top: 60px;
+    position: relative;
+  }
   .timeline-item .item[data-v-5c5ef65f]{
     border-left:5px solid #ccd5db;
     padding:20px 0 20px 15px;
@@ -297,13 +302,14 @@ export default {
   .timeline .wrapper-item.unique-timeline[data-v-30ba92e0]{
     margin-bottom:0;
     }
+
+  #section02{
     .sec02img{
       position: absolute;
       right: 5%;
       width: 40%;
       max-width: 80%;
       object-fit: contain;
-      // margin-top: 3rem;
     }
 
     @media (min-width:0px) and (max-width: 576px){
@@ -346,16 +352,15 @@ export default {
        }
        .sec02img{
           position: absolute;
-          left: 25%;
-          top: 120%;
+          left: 20%;
+          top: 0%;
           width: 100%;
-          max-width: 75%;
           margin-top: 0.5rem;
           filter: opacity(12%);
         }
 
      }
-     @media (min-width:1201px) and (max-width: 1920px){
+     @media (min-width:1201px) and (max-width: 2400px){
        .timeline[data-v-30ba92e0]{
         margin-left: 1rem;
         text-align:left;
@@ -366,11 +371,9 @@ export default {
           position: absolute;
           right: 8%;
           width: 40%;
-          top:205%;
+          top:0%;
           max-width: 80%;
-          margin-top: 5rem;
           overflow: hidden;
-          // filter: opacity(12%);
         }
 
      }
